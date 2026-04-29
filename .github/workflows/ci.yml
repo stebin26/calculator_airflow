@@ -16,9 +16,6 @@ jobs:
       - name: Install dependencies
         run: pip install pytest pylint
 
-      - name: Run tests
-        run: pytest
-
       - name: Run pylint
         run: pylint app/calculator.py
 
@@ -27,3 +24,6 @@ jobs:
 
       - name: Run Container
         run: docker run -d calculator-app
+
+      - name: Run tests
+        run: PYTHONPATH=$PWD pytest tests/
