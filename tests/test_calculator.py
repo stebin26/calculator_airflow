@@ -1,3 +1,4 @@
+import pytest
 from app.calculator import add, subtract, multiply, divide
 """Calculator module for basic operations"""
 def test_add():
